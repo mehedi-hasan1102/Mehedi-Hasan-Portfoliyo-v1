@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,13 @@ const Navbar = () => {
   return (
     <>
       <header className=" z-10 top-0 left-0 right-0 fixed flex justify-between items-center pl-0 pb-4 max-w-[1800px] mx-auto">
-        <div className="bg-base-200 p-6   text-xl font-bold text-base-content">Mehedi</div>
+        {/* <div className="bg-base-200 p-6   text-xl font-bold text-base-content">Mehedi</div> */}
+
+        <Link to="/">
+  <div className="bg-base-200 p-6 text-xl font-bold text-base-content">
+    Mehedi
+  </div>
+</Link>
 
         <div className=" bg-base-200 p-6  flex items-center gap-4">
           {/* DaisyUI theme toggle (manual version with icons) */}
