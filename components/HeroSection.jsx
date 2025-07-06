@@ -46,56 +46,64 @@ const HeroSection = () => {
       <Helmet>
         <title>Mehedi Hasan - Home</title>
       </Helmet>
-    {/* <div className="pl-24 min-h-screen px-6 py-10 bg-base-100 text-base-content"> */}
-    <div className="md:pl-24 mb-16 mt-16 min-h-screen px-0 py-0 bg-base-100 text-base-content">
-     
+      {/* <div className="pl-24 min-h-screen px-6 py-10 bg-base-100 text-base-content"> */}
+      <div className="md:pl-24 mb-16 mt-16 min-h-screen px-0 py-0 bg-base-100 text-base-content">
 
 
-      <main className="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
-  {/* Image (single) */}
-  <div className="flex-1 flex justify-center order-first md:order-last mt-8 md:mt-0">
-    <img
-      src="https://i.ibb.co/jZkXcSJJ/6b2a9bc5-6b88-468c-93a6-ff8d4e71cd1c33.png"
-      alt="Mehedi Hasan"
-      className="object-cover border-b-4 rounded-2xl w-[250px] sm:w-[300px] h-auto"
-    />
-  </div>
 
-  {/* Text content */}
-  <div className="text-center md:text-left px-6 py-10 flex-1 space-y-8">
-    <p className=" text-xl font-light font-serif">Hi, I’m</p>
-    <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
-    <Typewriter />
-    <p className="text-base sm:text-lg font-light max-w-md">
-      A passionate Frontend Developer based in Bangladesh, I specialize in React, Tailwind CSS, and Next.js.
-    </p>
-    <div className="flex gap-4 justify-center md:justify-start">
-      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-  {/* Resume Button */}
-  <a
+        <main className="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
+          {/* Image (single) */}
+          <div className="flex-1 flex justify-center order-first md:order-last mt-8 md:mt-0">
+            <img
+              src="https://i.ibb.co/jZkXcSJJ/6b2a9bc5-6b88-468c-93a6-ff8d4e71cd1c33.png"
+              alt="Mehedi Hasan"
+              className="object-cover border-b-4 rounded-2xl w-[250px] sm:w-[300px] h-auto"
+            />
+          </div>
+
+          {/* Text content */}
+          <div className="text-center md:text-left px-6 py-10 flex-1 space-y-8">
+            <p className=" text-xl font-light font-serif">Hi, I’m</p>
+            <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
+            <Typewriter />
+            <p className="text-base sm:text-lg font-light max-w-md">
+              A passionate Frontend Developer based in Bangladesh, I specialize in React, Tailwind CSS, and Next.js.
+            </p>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                {/* Resume Button */}
+
+                {/* <a
     href="https://drive.google.com/file/d/1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8/view"
     target="_blank"
     rel="noopener noreferrer"
     className="btn btn-primary  shadow-md hover:scale-105 transition-transform duration-300"
-  >
-    📄 My Resume
-  </a>
+  > */}
 
-  {/* Contact Me Button */}
-  <a
-    href="/contact"
-    className="btn btn-outline  hover:scale-105 transition-transform duration-300"
-  >
-    ✉️ Contact Me
-  </a>
-</div>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary shadow-md hover:scale-105 transition-transform duration-300"
+                >
+                  📄 My Resume
+                </a>
 
-      
-    </div>
-  </div>
-</main>
+                {/* Contact Me Button */}
+                <a
+                  href="/contact"
+                  className="btn btn-outline  hover:scale-105 transition-transform duration-300"
+                >
+                  ✉️ Contact Me
+                </a>
+              </div>
 
-    </div>
+
+            </div>
+          </div>
+        </main>
+
+      </div>
     </>
   );
 };
