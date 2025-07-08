@@ -1,11 +1,22 @@
 import { Helmet } from 'react-helmet-async';
 import React from "react";
 
+// const phrases = [
+//   "I craft stunning UIs with React & Tailwind",
+//   "I build modern web applications",
+//   "I develop responsive and beautiful websites",
+// ];
+
 const phrases = [
   "I craft stunning UIs with React & Tailwind",
-  "I build modern web applications",
-  "I develop responsive and beautiful websites",
+  "I build full-stack web apps with the MERN stack",
+  "I develop responsive, scalable applications using MongoDB, Express, React & Node.js",
+  "I create dynamic APIs with Express and Node.js",
+  "I design and manage NoSQL databases with MongoDB",
+  "I implement seamless user experiences with React",
+  "I integrate backend services and frontend interfaces",
 ];
+
 
 const Typewriter = () => {
   const [text, setText] = React.useState("");
@@ -67,8 +78,7 @@ const HeroSection = () => {
             <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
             <Typewriter />
             <p className="text-base sm:text-lg font-light max-w-md">
-              A passionate Frontend Developer based in Bangladesh, I specialize in React, Tailwind CSS, and Next.js.
-            </p>
+              Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p>
             <div className="flex gap-4 justify-center md:justify-start">
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {/* Resume Button */}
