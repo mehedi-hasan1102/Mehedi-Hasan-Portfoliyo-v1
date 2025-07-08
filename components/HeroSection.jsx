@@ -1,11 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import React from "react";
 
-// const phrases = [
-//   "I craft stunning UIs with React & Tailwind",
-//   "I build modern web applications",
-//   "I develop responsive and beautiful websites",
-// ];
+
 
 const phrases = [
   "I craft stunning UIs with React & Tailwind",
