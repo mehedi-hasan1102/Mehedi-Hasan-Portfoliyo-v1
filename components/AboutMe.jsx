@@ -117,6 +117,39 @@ const AboutMe = () => {
       `}
       </style>
     </div>
+   {/* GitHub Activity */}
+        <div className="mb-12 w-full overflow-hidden px-4">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">GitHub Activity</h2>
+          <hr className="border-base-content opacity-30 mb-10" />
+
+
+
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Contribution Graph */}
+            <div className="flex flex-col h-full bg-base-200 text-base-content rounded-2xl shadow-xl border border-base-content/10 hover:shadow-2xl transition duration-300 p-6 md:p-8">
+              <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">Contribution Graph</h3>
+              <div className="bg-base-100 rounded-xl p-4 flex-1 flex items-center justify-center">
+                <img
+                  src="https://ghchart.rshah.org/HasanCodeX"
+                  alt="GitHub Contribution Chart"
+                  className="w-full h-auto rounded"
+                />
+              </div>
+            </div>
+
+            {/* GitHub Stats */}
+            <div className="flex flex-col h-full bg-base-200 text-base-content rounded-2xl shadow-xl border border-base-content/10 hover:shadow-2xl transition duration-300 p-6 md:p-8">
+              <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">Stats Overview</h3>
+              <div className="bg-base-100 rounded-xl p-4 flex-1 flex items-center justify-center">
+                <img
+                  src={`https://github-readme-stats.vercel.app/api?username=HasanCodeX&show_icons=true&hide_border=true&theme=radical`}
+                  alt="GitHub Stats"
+                  className="w-full h-auto rounded"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
       {/* Services */}
       <div >
