@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
   const formRef = useRef();
