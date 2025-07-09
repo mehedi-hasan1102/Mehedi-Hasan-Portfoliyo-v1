@@ -10,7 +10,7 @@ import {
 } from "react-icons/si";
 import { MdOutlineApi } from "react-icons/md";
 import GitHubCalendar from 'react-github-calendar';
-import GitHubContributionCalendar from 'react-github-contribution-calendar';
+
 
 const skills = [
   { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400 text-5xl" /> },
