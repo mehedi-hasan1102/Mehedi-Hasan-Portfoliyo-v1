@@ -60,7 +60,10 @@ const AboutMe = () => {
 
         
         <p className="text-base-content/70 leading-relaxed text-sm md:text-base">
-          Hi, I’m <span className="font-semibold text-primary">Mehedi Hasan</span> — a passionate Frontend Developer based in Bangladesh. I specialize in building modern, responsive web applications using technologies like <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>Next.js</strong>.
+          {/* Hi, I’m <span className="font-semibold text-primary">Mehedi Hasan</span> — a passionate Frontend Developer based in Bangladesh. I specialize in building modern, responsive web applications using technologies like <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>Next.js</strong>. */}
+
+      Hi, I’m <span className="font-semibold text-primary">Mehedi Hasan</span> — a passionate MERN Stack Developer based in Bangladesh. I specialize in building modern, responsive web applications using technologies like <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, and <strong>Tailwind CSS</strong>.
+   
         </p>
       </div>
     </div>
