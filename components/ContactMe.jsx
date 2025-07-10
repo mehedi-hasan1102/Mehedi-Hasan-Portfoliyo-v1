@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import React, { useRef, useState } from "react";
-// import emailjs from "emailjs-com";
 import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
@@ -12,7 +11,7 @@ const ContactMe = () => {
 
     emailjs
       .sendForm(
-        "service_ex94m43",     // Replace with actual YOUR_SERVICE_ID
+        "service_vgrd9bo",     // Replace with actual YOUR_SERVICE_ID
         "template_5yn6hqg",    // Replace with actual YOUR_TEMPLATE_ID
         formRef.current,
         "UFLgRUB3KBnkwrw5_"      // Replace with actual YOUR_USER_ID ✅ This is your public key (can also be called "public key" in newer docs)
@@ -49,10 +48,10 @@ const ContactMe = () => {
             <p className="mb-4">
               <span className="font-bold">Email:</span>{" "}
               <a
-                href="mailto:dev.hasan10@gmail.com"
-                className="underline hover:text-primary"
+                href="mailto:mehedi.hasan11023@gmail.com"
+                className="hover:text-primary"
               >
-                dev.hasan10@gmail.com
+                mehedi.hasan11023@gmail.com
               </a>
             </p>
             <p className="mb-4">
