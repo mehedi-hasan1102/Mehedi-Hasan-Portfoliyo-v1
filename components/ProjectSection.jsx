@@ -1,10 +1,5 @@
-
 import React, { useState } from "react";
-// import { FaGlobe, FaCode, FaServer } from "react-icons/fa";
 import { FaGlobe, FaCode, FaServer, FaInfoCircle, FaTimes } from "react-icons/fa";
-
-
-
 
 // Project data
 const projects = [
@@ -76,7 +71,7 @@ const ProjectCard = ({ project, onDetailsClick }) => {
         />
       </div>
 
-      <div className="w-full md:w-1/2 text-center md:text-left">
+      <div className="w-full md:w-1/2 text-left">
         <h2 className="text-2xl font-bold mb-2 text-base-content">{title}</h2>
         <p className="text-sm mb-3 text-base-content/80">{description}</p>
         <ul className="text-sm mb-4 list-disc list-inside space-y-1 text-base-content/80">
@@ -85,7 +80,7 @@ const ProjectCard = ({ project, onDetailsClick }) => {
           ))}
         </ul>
 
-        <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
+        <div className="flex flex-wrap gap-2 mb-4 justify-start">
           {techStack.map((tech, i) => (
             <span key={i} className="badge badge-outline text-xs px-3 py-1">
               {tech}
@@ -93,7 +88,7 @@ const ProjectCard = ({ project, onDetailsClick }) => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+        <div className="flex flex-wrap gap-2 justify-start">
           {liveLink && (
             <a
               href={liveLink}
@@ -124,18 +119,12 @@ const ProjectCard = ({ project, onDetailsClick }) => {
               <FaServer /> Server Code
             </a>
           )}
-          {/* <button
-            onClick={() => onDetailsClick(project)}
-            className="btn btn-sm btn-neutral"
-          >
-            Details
-          </button> */}
           <button
-  onClick={() => onDetailsClick(project)}
-  className="btn btn-sm btn-neutral gap-2"
->
-  <FaInfoCircle /> Details
-</button>
+            onClick={() => onDetailsClick(project)}
+            className="btn btn-sm btn-neutral gap-2"
+          >
+            <FaInfoCircle /> Details
+          </button>
         </div>
       </div>
     </div>
@@ -153,7 +142,7 @@ const ProjectSection = () => {
 
   return (
     <section id="projects">
-      <div className="md:pl-24 min-h-screen px-6 py-20 bg-base-100 text-base-content text-center md:text-left">
+      <div className="md:pl-24 min-h-screen px-6 py-20 bg-base-100 text-base-content text-left">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">My Projects</h2>
         <hr className="border-base-content opacity-30 mb-10" />
 
@@ -169,7 +158,7 @@ const ProjectSection = () => {
 
         {/* Modal for Details */}
         <dialog id="project_modal" className="modal bg-black/30 backdrop-blur-sm">
-          <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-xl shadow-lg text-center md:text-left">
+          <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-xl shadow-lg text-left">
             {selectedProject && (
               <>
                 <img
@@ -190,7 +179,7 @@ const ProjectSection = () => {
                 </ul>
 
                 <h4 className="font-semibold mb-2">Tech Stack:</h4>
-                <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-2 mb-6 justify-start">
                   {selectedProject.techStack.map((tech, i) => (
                     <span
                       key={i}
@@ -201,7 +190,7 @@ const ProjectSection = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-3 mb-6 justify-start">
                   {selectedProject.liveLink && (
                     <a
                       href={selectedProject.liveLink}
@@ -234,14 +223,14 @@ const ProjectSection = () => {
                   )}
                 </div>
 
-                <div className="modal-action flex justify-center md:justify-end">
-  <form method="dialog">
-    <button className="btn btn-sm btn-error text-white gap-2">
-      <FaTimes /> Close
-    </button>
-  </form>
-</div>
-
+                {/* Close button always right-aligned */}
+                <div className="modal-action flex justify-end">
+                  <form method="dialog">
+                    <button className="btn btn-sm btn-error text-white gap-2">
+                      <FaTimes /> Close
+                    </button>
+                  </form>
+                </div>
               </>
             )}
           </div>
