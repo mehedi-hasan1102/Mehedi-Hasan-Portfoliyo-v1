@@ -42,9 +42,10 @@ const AboutMe = () => {
   return (
     <section id="about"  >
       
-      <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
+      {/* <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
+ */}
 
-
+<div className="md:pl-24 min-h-screen px-6 py-20 bg-base-100 text-base-content text-center md:text-left">
    
         {/* About Header */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">About Me</h2>
@@ -59,6 +60,21 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
+{/* Education Section */}
+<div className="mb-12 w-full overflow-hidden px-4">
+  <h2 className="text-2xl md:text-3xl font-semibold mb-4">Education</h2>
+  <hr className="border-base-content opacity-30 mb-10" />
+  
+  <div className="max-w-3xl mx-auto grid gap-6">
+    <div className="bg-base-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default">
+      <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-2">
+        BSc (Honours) in Physics
+      </h3>
+      <p className="text-base-content/90">National University, Bangladesh</p>
+      <p className="text-sm text-base-content/70 mt-1">Expected Graduation: 2025</p>
+    </div>
+  </div>
+</div>
 
         {/* Skills Section */}
         <div className="mb-12 w-full overflow-hidden px-4">
