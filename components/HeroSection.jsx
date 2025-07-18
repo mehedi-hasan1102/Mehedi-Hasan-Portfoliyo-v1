@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
+import { FileText, Mail } from 'lucide-react';
 
 
 
@@ -50,74 +51,71 @@ const Typewriter = () => {
 const HeroSection = () => {
   return (
     <>
-    <Helmet>
-  <title>Mehedi Hasan | Full-Stack Developer Portfolio</title>
-</Helmet>
+      <Helmet>
+        <title>Mehedi Hasan | Full-Stack Developer Portfolio</title>
+      </Helmet>
 
-    <section id="home">
-      
-     <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
-      
-     
+      <section id="home">
+
+        <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
 
 
-        <main className="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
-          {/* Image (single) */}
-          <div className="flex-1 flex justify-center order-first md:order-last mt-8 md:mt-0">
-            <img
-              src="https://i.ibb.co/jZkXcSJJ/6b2a9bc5-6b88-468c-93a6-ff8d4e71cd1c33.png"
-              alt="Mehedi Hasan"
-              className="object-cover border-b-4 rounded-2xl w-[250px] sm:w-[300px] h-auto"
-            />
-          </div>
-
-          {/* Text content */}
-          <div className="text-center md:text-left px-6 py-10 flex-1 space-y-8">
-            <p className=" text-xl font-light font-serif">Hi, I’m</p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
-            <Typewriter />
-            <p className="text-base sm:text-lg font-light max-w-md">
-              Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                {/* Resume Button */}
-
-                {/* <a
-    href="https://drive.google.com/file/d/1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8/view"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn btn-primary  shadow-md hover:scale-105 transition-transform duration-300"
-  > */}
-
-                <a
-                  href="https://drive.google.com/uc?export=download&id=1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline  hover:scale-105 transition-transform duration-300"
-                >
-                  📄 My Resume
-                </a>
-
-                {/* Contact Me Button */}
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="btn btn-outline  hover:scale-105 transition-transform duration-300"
-                >
-                  ✉️ Contact Me
-                </a>
-              </div>
 
 
+          <main className="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
+            {/* Image (single) */}
+            <div className="flex-1 flex justify-center order-first md:order-last mt-8 md:mt-0">
+              <img
+                src="https://i.ibb.co/jZkXcSJJ/6b2a9bc5-6b88-468c-93a6-ff8d4e71cd1c33.png"
+                alt="Mehedi Hasan"
+                className="object-cover border-b-4 rounded-2xl w-[250px] sm:w-[300px] h-auto"
+              />
             </div>
-          </div>
-        </main>
 
-      </div>
-    </section>
+            {/* Text content */}
+            <div className="text-center md:text-left px-6 py-10 flex-1 space-y-8">
+              <p className=" text-xl font-light font-serif">Hi, I’m</p>
+              <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
+              <Typewriter />
+              <p className="text-base sm:text-lg font-light max-w-md">
+                Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p>
+              <div className="flex gap-4 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                 
+                 
+                  {/*  Button */}
+
+
+                  <a
+                    href="https://drive.google.com/uc?export=download&id=1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline flex items-center gap-2 px-5 py-2 font-semibold shadow hover:scale-105 transition-transform duration-300"
+                  >
+                    <FileText className="w-5 h-5" />
+                    My Resume
+                  </a>
+
+                  <a
+                    href="#contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="btn btn-outline flex items-center gap-2 px-5 py-2 font-semibold shadow hover:scale-105 transition-transform duration-300"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Contact Me
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+          </main>
+
+        </div>
+      </section>
     </>
   );
 };
