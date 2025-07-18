@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+
 import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
@@ -32,11 +32,9 @@ const ContactMe = () => {
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Mehedi Hasan - Contact</title>
-      </Helmet>
-    <div className="md:pl-24 mb-16 mt-16 min-h-screen px-6 py-10 bg-base-100 text-base-content">
+    <section id="contact">
+      
+   <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Contact Me</h2>
         <hr className="border-base-content opacity-30 mb-10" />
@@ -119,7 +117,7 @@ const ContactMe = () => {
         </div>
       </div>
     </div>
-    </>
+    </section>
   );
 };
 

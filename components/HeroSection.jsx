@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet-async';
 import React from "react";
 
+import { Helmet } from "react-helmet";
 
 
 const phrases = [
@@ -50,12 +50,15 @@ const Typewriter = () => {
 const HeroSection = () => {
   return (
     <>
-      <Helmet>
-        <title>Mehedi Hasan - Home</title>
-      </Helmet>
-      {/* <div className="pl-24 min-h-screen px-6 py-10 bg-base-100 text-base-content"> */}
-      <div className="md:pl-24 mb-16 mt-16 min-h-screen px-0 py-0 bg-base-100 text-base-content">
+    <Helmet>
+  <title>Mehedi Hasan | Full-Stack Developer Portfolio</title>
+</Helmet>
 
+    <section id="home">
+      
+     <div className="md:pl-24  min-h-screen px-6 py-20 bg-base-100 text-base-content">
+      
+     
 
 
         <main className="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
@@ -90,14 +93,18 @@ const HeroSection = () => {
                   href="https://drive.google.com/uc?export=download&id=1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary shadow-md hover:scale-105 transition-transform duration-300"
+                  className="btn btn-outline  hover:scale-105 transition-transform duration-300"
                 >
                   📄 My Resume
                 </a>
 
                 {/* Contact Me Button */}
                 <a
-                  href="/contact"
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="btn btn-outline  hover:scale-105 transition-transform duration-300"
                 >
                   ✉️ Contact Me
@@ -110,6 +117,7 @@ const HeroSection = () => {
         </main>
 
       </div>
+    </section>
     </>
   );
 };
