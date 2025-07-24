@@ -9,23 +9,23 @@ import {
 
 const links = [
   {
-    href: "https://github.com/hasancodex",
+    href: "https://github.com/mehedi-hasan1102",
     icon: <FaGithub size={18} />,
     label: "GitHub",
   },
   // {
-  //   href: "https://facebook.com/hasancodex",
+  //   href: "https://facebook.com/mehedi.hasan1102",
   //   icon: <FaFacebookF size={18} />,
   //   label: "Facebook",
   // },
 
   {
-    href: "https://linkedin.com/in/hasancodex",
+    href: "https://linkedin.com/in/mehedi-hasan1102",
     icon: <FaLinkedinIn size={18} />,
     label: "LinkedIn",
   },
   {
-    href: "https://x.com/hasancodex",
+    href: "https://x.com/mehedihasan1102",
     icon: <FaTwitter size={18} />,
     label: "Twitter",
   },

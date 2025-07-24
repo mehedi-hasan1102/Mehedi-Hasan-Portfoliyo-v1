@@ -111,7 +111,7 @@ const AboutMe = () => {
           <hr className="border-base-content opacity-30 mb-10" />
           <div className="flex justify-center items-center bg-base-200 p-6 rounded-xl shadow-md border border-base-content/10">
             <GitHubCalendar
-              username="HasanCodeX"
+              username="mehedi-hasan1102"
               colorScheme="light"
               blockSize={14}
               blockMargin={4}

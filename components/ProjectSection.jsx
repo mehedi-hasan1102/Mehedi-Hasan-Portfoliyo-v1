@@ -4,6 +4,24 @@ import { FaGlobe, FaCode, FaServer, FaInfoCircle, FaTimes } from "react-icons/fa
 // Project data
 const projects = [
   {
+    title: "Active Arena",
+    description:
+      "A production-ready play ground management app featuring real-time synchronization, JWT authentication, and optimized performance.",
+    features: [
+      "Payment integration with Stripe",
+      "JWT Authentication flow",
+      "Full CRUD operations",
+    ],
+    techStack: ["React 19", "Stripe", "Firebase"],
+    liveLink: "https://food-garden-bd.web.app",
+    frontendRepo:
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---client",
+    backendRepo:
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---server",
+    image:
+      "https://i.ibb.co/Rkvdr5YS/pexels9773.jpg",
+  },
+  {
     title: "Food Garden",
     description:
       "A production-ready food management app featuring real-time synchronization, JWT authentication, and optimized performance.",
@@ -15,23 +33,11 @@ const projects = [
     techStack: ["React 19", "Tailwind CSS", "Firebase"],
     liveLink: "https://food-garden-bd.web.app",
     frontendRepo:
-      "https://github.com/HasanCodeX/Project---web-b11-A12-FoodGarden---client",
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---client",
     backendRepo:
-      "https://github.com/HasanCodeX/Project---web-b11-A12-FoodGarden---server",
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---server",
     image:
       "https://i.ibb.co/NnQx5NND/Food-Guardian-06-29-2025-01-13-AM.png",
-  },
-  {
-    title: "Event Explorer",
-    description:
-      "A full-stack event booking platform where users can browse and reserve seats for local events.",
-    features: ["Authentication", "Booking System", "Firebase Integration"],
-    techStack: ["React", "Firebase", "Node.js"],
-    liveLink: "https://event-explorer-bd.netlify.app",
-    frontendRepo:
-      "https://github.com/HasanCodeX/Project---web-b11-A9-Event-Explorer",
-    image:
-      "https://i.ibb.co/VWcfS0BV/Home-Event-Explorer-06-29-2025-01-07-AM.png",
   },
   {
     title: "Plant Care Tracker",
@@ -41,10 +47,22 @@ const projects = [
     techStack: ["MongoDB", "Express", "React", "Node.js"],
     liveLink: "https://plant-care-tracker-bd.web.app",
     frontendRepo:
-      "https://github.com/HasanCodeX/Project---web-b11-A10-PlantCare---client",
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A10-PlantCare---client",
     backendRepo:
-      "https://github.com/HasanCodeX/Project---web-b11-A10-PlantCare---server",
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A10-PlantCare---server",
     image: "https://i.ibb.co/27ssr5tp/Plant-Care-06-29-2025-12-43-AM.png",
+  },
+  {
+    title: "Event Explorer",
+    description:
+      "A full-stack event booking platform where users can browse and reserve seats for local events.",
+    features: ["Authentication", "Booking System", "Firebase Integration"],
+    techStack: ["React", "Firebase", "Node.js"],
+    liveLink: "https://event-explorer-bd.netlify.app",
+    frontendRepo:
+      "https://github.com/mehedi-hasan1102/Project---web-b11-A9-Event-Explorer",
+    image:
+      "https://i.ibb.co/VWcfS0BV/Home-Event-Explorer-06-29-2025-01-07-AM.png",
   },
 ];
 
@@ -132,13 +150,18 @@ const ProjectCard = ({ project, onDetailsClick }) => {
 };
 
 // Project Section with Modal
+
+
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   const handleDetailsClick = (project) => {
     setSelectedProject(project);
     document.getElementById("project_modal").showModal();
   };
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
     <section id="projects">
@@ -147,7 +170,7 @@ const ProjectSection = () => {
         <hr className="border-base-content opacity-30 mb-10" />
 
         <div className="space-y-10 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard
               key={index}
               project={project}
@@ -155,6 +178,18 @@ const ProjectSection = () => {
             />
           ))}
         </div>
+
+        {/* View More / View Less Button */}
+        {projects.length > 3 && (
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="btn btn-outline "
+            >
+              {showAll ? "View Less" : "View More"}
+            </button>
+          </div>
+        )}
 
         {/* Modal for Details */}
         <dialog id="project_modal" className="modal bg-black/30 backdrop-blur-sm">
@@ -223,7 +258,6 @@ const ProjectSection = () => {
                   )}
                 </div>
 
-                {/* Close button always right-aligned */}
                 <div className="modal-action flex justify-end">
                   <form method="dialog">
                     <button className="btn btn-sm btn-error text-white gap-2">
@@ -239,5 +273,6 @@ const ProjectSection = () => {
     </section>
   );
 };
+
 
 export default ProjectSection;

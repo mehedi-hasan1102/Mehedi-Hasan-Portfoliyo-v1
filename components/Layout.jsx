@@ -46,21 +46,15 @@
 import React from "react";
 import Navbar from "./Navbar";
 import SocialSidebar from "./SocialSidebar";
-import HeroSection from "./HeroSection";
-import AboutMe from "./AboutMe";
-import ProjectSection from "./ProjectSection";
-import ContactMe from "./ContactMe";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
       <SocialSidebar />
-      <main > 
-        <HeroSection />
-        <AboutMe />
-        <ProjectSection />
-        <ContactMe />
+      <main>
+        <Outlet />
       </main>
     </>
   );
