@@ -102,7 +102,7 @@ const ContactMe = () => {
             ></textarea>
             <button
               type="submit"
-              className="btn btn-outline border-base-content text-base-content hover:bg-primary hover:text-white"
+              className="btn btn-outline border-base-content text-base-content"
             >
               Send
             </button>
