@@ -110,11 +110,11 @@ const ProjectCard = ({ project, onDetailsClick }) => {
           {liveLink && (
             <a
               href={liveLink}
-              className="btn btn-sm btn-primary gap-2"
+              className="btn btn-sm btn-outline gap-2"
               target="_blank"
               rel="noreferrer"
             >
-              <FaGlobe /> Live Site
+              <FaGlobe /> Live Site 
             </a>
           )}
           {frontendRepo && (
@@ -196,6 +196,7 @@ const ProjectSection = () => {
           <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-xl shadow-lg text-left">
             {selectedProject && (
               <>
+              <div className="border-1 p-6 rounded-2xl">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -229,7 +230,7 @@ const ProjectSection = () => {
                   {selectedProject.liveLink && (
                     <a
                       href={selectedProject.liveLink}
-                      className="btn btn-sm btn-primary gap-2"
+                      className="btn btn-sm btn-outline gap-2"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -264,6 +265,7 @@ const ProjectSection = () => {
                       <FaTimes /> Close
                     </button>
                   </form>
+                </div>
                 </div>
               </>
             )}
