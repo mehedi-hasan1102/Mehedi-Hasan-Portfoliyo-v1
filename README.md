@@ -1,6 +1,6 @@
 # 🌐 Mehedi Hasan — Developer Portfolio
 
-**Live Site:** [mehedi-bd.vercel.app](https://mehedi-bd.vercel.app)  
+**Live Site:** [mehedi-h.vercel.app](https://mehedi-h.vercel.app)  
 **GitHub Repo:** [github.com/mehedi-hasan1102/Mehedi-Hasan-Website](https://github.com/mehedi-hasan1102/Mehedi-Hasan-Website)
 
 ---

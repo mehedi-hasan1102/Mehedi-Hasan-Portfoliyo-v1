@@ -13,11 +13,11 @@ const projects = [
       "Full CRUD operations",
     ],
     techStack: ["React 19", "Stripe", "Firebase"],
-    liveLink: "https://food-garden-bd.web.app",
+    liveLink: "https://buildbox-a12.web.app",
     frontendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---client",
+      "https://github.com/mehedi-hasan1102/Active-Arena-Client",
     backendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---server",
+      "https://github.com/mehedi-hasan1102/Active-Arena-Server",
     images: [
       "https://i.ibb.co/Rkvdr5YS/pexels9773.jpg",
       "https://i.ibb.co/7d9jJw84/Active-Arena-111.webp", 
@@ -36,9 +36,9 @@ const projects = [
     techStack: ["React 19", "Tailwind CSS", "Firebase"],
     liveLink: "https://food-garden-bd.web.app",
     frontendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---client",
+      "https://github.com/mehedi-hasan1102/Food-Garden-Client",
     backendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A12-FoodGarden---server",
+      "https://github.com/mehedi-hasan1102/Food-Garden-Server",
     images: [
       "https://i.ibb.co/NnQx5NND/Food-Guardian-06-29-2025-01-13-AM.png",
       "https://i.ibb.co/7x50g4Vj/meet2.jpg",
@@ -53,9 +53,9 @@ const projects = [
     techStack: ["MongoDB", "Express", "React", "Node.js"],
     liveLink: "https://plant-care-tracker-bd.web.app",
     frontendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A10-PlantCare---client",
+      "https://github.com/mehedi-hasan1102/Plant-Care-Client",
     backendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A10-PlantCare---server",
+      "https://github.com/mehedi-hasan1102/Plant-Care-Server",
     images: [
       "https://i.ibb.co/27ssr5tp/Plant-Care-06-29-2025-12-43-AM.png",
       "https://i.ibb.co/5Xd0czvc/Houseplant-Primer-A-Guide-to-Basic-Care-and-Durable-Plants.jpg", 
@@ -70,7 +70,7 @@ const projects = [
     techStack: ["React", "Firebase", "Node.js"],
     liveLink: "https://event-explorer-bd.netlify.app",
     frontendRepo:
-      "https://github.com/mehedi-hasan1102/Project---web-b11-A9-Event-Explorer",
+      "https://github.com/mehedi-hasan1102/Event-Explorer",
     images: [
       "https://i.ibb.co/VWcfS0BV/Home-Event-Explorer-06-29-2025-01-07-AM.png",
       "https://i.ibb.co/nqDYhzLP/image5.jpg", 
