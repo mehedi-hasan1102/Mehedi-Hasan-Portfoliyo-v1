@@ -105,12 +105,12 @@ const ProjectCard = ({ project, onDetailsClick }) => {
   }, [images.length]);
 
   return (
-    <div className="border border-base-content rounded-xl p-6 flex flex-col md:flex-row gap-6 bg-base-200 shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="border border-base-content  p-6 flex flex-col md:flex-row gap-6 bg-base-200 shadow-md hover:shadow-lg transition-all duration-300">
       <div className="w-full md:w-1/2">
         <img
           src={images[currentImageIndex]}
           alt={`${title} screenshot ${currentImageIndex + 1}`}
-          className="rounded-lg object-cover w-full h-full max-h-[250px]"
+          className=" object-cover w-full h-full max-h-[250px]"
         />
       </div>
 
@@ -174,130 +174,7 @@ const ProjectCard = ({ project, onDetailsClick }) => {
   );
 };
 
-// Project Section with Modal and View More functionality
-// const ProjectSection = () => {
-//   const [selectedProject, setSelectedProject] = useState(null);
-//   const [showAll, setShowAll] = useState(false);
 
-//   const handleDetailsClick = (project) => {
-//     setSelectedProject(project);
-//     document.getElementById("project_modal").showModal();
-//   };
-
-//   const visibleProjects = showAll ? projects : projects.slice(0, 3);
-
-//   return (
-//     <section id="projects">
-//       <div className="md:pl-24 min-h-screen px-6 py-20 bg-base-100 text-base-content text-left">
-//         <h2 className="text-3xl md:text-4xl font-semibold mb-4">My Projects</h2>
-//         <hr className="border-base-content opacity-30 mb-10" />
-
-//         <div className="space-y-10 max-w-6xl mx-auto">
-//           {visibleProjects.map((project, index) => (
-//             <ProjectCard
-//               key={index}
-//               project={project}
-//               onDetailsClick={handleDetailsClick}
-//             />
-//           ))}
-//         </div>
-
-//         {/* View More / View Less Button */}
-//         {projects.length > 3 && (
-//           <div className="mt-10 text-center">
-//             <button
-//               onClick={() => setShowAll(!showAll)}
-//               className="btn btn-outline "
-//             >
-//               {showAll ? "View Less" : "View More"}
-//             </button>
-//           </div>
-//         )}
-
-//         {/* Modal for Details */}
-//         <dialog id="project_modal" className="modal bg-black/30 backdrop-blur-sm">
-//           <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-xl shadow-lg text-left">
-//             {selectedProject && (
-//               <>
-//                 <div className="border-1 p-6 rounded-2xl">
-//                   <img
-//                     src={selectedProject.images[0]} // Show first image in modal
-//                     alt={selectedProject.title}
-//                     className="rounded-xl mb-5 object-cover w-full max-h-[300px] shadow-md"
-//                   />
-//                   <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-//                   <p className="text-sm mb-4 text-base-content/80">
-//                     {selectedProject.description}
-//                   </p>
-
-//                   <h4 className="font-semibold mb-1">Key Features:</h4>
-//                   <ul className="list-disc list-inside mb-4 text-sm text-base-content/80">
-//                     {selectedProject.features.map((feature, i) => (
-//                       <li key={i}>{feature}</li>
-//                     ))}
-//                   </ul>
-
-//                   <h4 className="font-semibold mb-2">Tech Stack:</h4>
-//                   <div className="flex flex-wrap gap-2 mb-6 justify-start">
-//                     {selectedProject.techStack.map((tech, i) => (
-//                       <span
-//                         key={i}
-//                         className="badge badge-outline px-3 py-1 text-xs"
-//                       >
-//                         {tech}
-//                       </span>
-//                     ))}
-//                   </div>
-
-//                   <div className="flex flex-wrap gap-3 mb-6 justify-start">
-//                     {selectedProject.liveLink && (
-//                       <a
-//                         href={selectedProject.liveLink}
-//                         className="btn btn-sm btn-outline gap-2"
-//                         target="_blank"
-//                         rel="noreferrer"
-//                       >
-//                         <FaGlobe /> Live Site
-//                       </a>
-//                     )}
-//                     {selectedProject.frontendRepo && (
-//                       <a
-//                         href={selectedProject.frontendRepo}
-//                         className="btn btn-sm btn-outline gap-2"
-//                         target="_blank"
-//                         rel="noreferrer"
-//                       >
-//                         <FaCode /> Client Code
-//                       </a>
-//                     )}
-//                     {selectedProject.backendRepo && (
-//                       <a
-//                         href={selectedProject.backendRepo}
-//                         className="btn btn-sm btn-outline gap-2"
-//                         target="_blank"
-//                         rel="noreferrer"
-//                       >
-//                         <FaServer /> Server Code
-//                       </a>
-//                     )}
-//                   </div>
-
-//                   <div className="modal-action flex justify-end">
-//                     <form method="dialog">
-//                       <button className="btn btn-sm btn-error text-white gap-2">
-//                         <FaTimes /> Close
-//                       </button>
-//                     </form>
-//                   </div>
-//                 </div>
-//               </>
-//             )}
-//           </div>
-//         </dialog>
-//       </div>
-//     </section>
-//   );
-// };
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showAll, setShowAll] = useState(false);
@@ -353,14 +230,14 @@ const ProjectSection = () => {
         )}
 
         <dialog id="project_modal" className="modal bg-black/30 backdrop-blur-sm">
-          <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-xl shadow-lg text-left">
+          <div className="modal-box max-w-3xl bg-base-200 text-base-content  shadow-lg text-left">
             {selectedProject && (
               <>
-                <div className="border-1 p-6 rounded-2xl">
+                <div className="border-1 p-6 ">
                   <img
                     src={selectedProject.images[modalImageIndex]}
                     alt={`${selectedProject.title} screenshot ${modalImageIndex + 1}`}
-                    className="rounded-xl mb-5 object-cover w-full max-h-[300px] shadow-md"
+                    className=" mb-5 object-cover w-full max-h-[300px] shadow-md"
                   />
                   <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
                   <p className="text-sm mb-4 text-base-content/80">

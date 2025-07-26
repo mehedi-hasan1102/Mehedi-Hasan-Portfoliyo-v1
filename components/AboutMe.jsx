@@ -52,7 +52,7 @@ const AboutMe = () => {
 
         {/* Bio Section */}
         <div className="mb-12 max-w-3xl mx-auto">
-          <div className="bg-base-200 text-base-content shadow-lg rounded-xl p-6 md:p-8 border border-base-content/10">
+          <div className="bg-base-200 text-base-content shadow-lg  p-6 md:p-8 border border-base-content/10">
             <h2 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">The Developer Story</h2>
             <p className="text-base-content/70 leading-relaxed text-sm md:text-base">
               Hi, I’m <span className="font-semibold italic">Mehedi Hasan</span> — a passionate MERN Stack Developer based in Bangladesh. I specialize in building modern, responsive web applications using technologies like <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, and <strong>Tailwind CSS</strong>.
@@ -65,7 +65,7 @@ const AboutMe = () => {
   <hr className="border-base-content opacity-30 mb-10" />
   
   <div className="max-w-3xl mx-auto grid gap-6">
-    <div className="bg-base-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default">
+    <div className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default">
       <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-2">
         BSc (Honours) in Physics
       </h3>
@@ -84,7 +84,7 @@ const AboutMe = () => {
               {skills.map((skill, i) => (
                 <div
                   key={i}
-                  className="h-24 flex flex-col items-center justify-center md:min-w-[140px] md:h-44 bg-base-200 text-base-content rounded-xl p-4 shadow-md hover:scale-105 transition"
+                  className="h-24 flex flex-col items-center justify-center md:min-w-[140px] md:h-44 bg-base-200 text-base-content  p-4 shadow-md hover:scale-105 transition"
                 >
                   <div className="mb-3">{skill.icon}</div>
                   <div className="text-sm font-medium">{skill.name}</div>
@@ -109,7 +109,7 @@ const AboutMe = () => {
         <div className="mb-12 w-full overflow-hidden px-4">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">GitHub Activity</h2>
           <hr className="border-base-content opacity-30 mb-10" />
-          <div className="flex justify-center items-center bg-base-200 p-6 rounded-xl shadow-md border border-base-content/10">
+          <div className="flex justify-center items-center bg-base-200 p-6  shadow-md border border-base-content/10">
             <GitHubCalendar
               username="mehedi-hasan1102"
               colorScheme="light"
@@ -136,7 +136,7 @@ const AboutMe = () => {
             ].map(([title, desc], idx) => (
               <div
                 key={idx}
-                className="bg-base-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
+                className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
               >
                 <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">{title}</h3>
                 <p className="text-base-content/80">{desc}</p>
