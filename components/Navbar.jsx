@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "nord");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "abyss");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "nord" ? "abyss" : "nord"));
+    setTheme((prev) => (prev === "garden" ? "abyss" : "garden"));
   };
 
   const handleScroll = (id) => {
