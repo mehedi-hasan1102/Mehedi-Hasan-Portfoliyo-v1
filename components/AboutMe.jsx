@@ -60,12 +60,12 @@ const AboutMe = () => {
           </div>
         </div>
 {/* Education Section */}
-<div className="mb-12 w-full overflow-hidden px-4">
+<div className="mb-12 w-full overflow-hidden px-4 ">
   <h2 className="text-2xl md:text-3xl font-semibold mb-4">Education</h2>
   <hr className="border-base-content opacity-30 mb-10" />
   
-  <div className="max-w-3xl mx-auto grid gap-6">
-    <div className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default">
+  <div className="max-w-3xl mx-auto grid gap-6 border-base-content/10">
+    <div className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default border border-base-content/10">
       <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-2">
         BSc (Honours) in Physics
       </h3>
@@ -84,7 +84,7 @@ const AboutMe = () => {
               {skills.map((skill, i) => (
                 <div
                   key={i}
-                  className="h-24 flex flex-col items-center justify-center md:min-w-[140px] md:h-44 bg-base-200 text-base-content  p-4 shadow-md hover:scale-105 transition"
+                  className=" border border-base-content/10 h-24 flex flex-col items-center justify-center md:min-w-[140px] md:h-44 bg-base-200 text-base-content  p-4 shadow-md hover:scale-105 transition"
                 >
                   <div className="mb-3">{skill.icon}</div>
                   <div className="text-sm font-medium">{skill.name}</div>
@@ -128,7 +128,7 @@ const AboutMe = () => {
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">Services</h2>
           <hr className="border-base-content opacity-30 mb-10" />
-          <div className="mb-12 max-w-3xl mx-auto grid gap-6 md:grid-cols-3">
+          <div className="mb-12 max-w-3xl mx-auto grid gap-6 md:grid-cols-3 ">
             {[
               ["UI & UX Design", "Creating user-centered interfaces with responsive design."],
               ["Frontend Development", "Building fast, responsive UIs using React and Tailwind."],
@@ -136,7 +136,7 @@ const AboutMe = () => {
             ].map(([title, desc], idx) => (
               <div
                 key={idx}
-                className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
+                className="border border-base-content/10 bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
               >
                 <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">{title}</h3>
                 <p className="text-base-content/80">{desc}</p>

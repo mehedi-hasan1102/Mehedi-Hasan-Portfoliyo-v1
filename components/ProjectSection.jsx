@@ -105,7 +105,7 @@ const ProjectCard = ({ project, onDetailsClick }) => {
   }, [images.length]);
 
   return (
-    <div className="border border-base-content  p-6 flex flex-col md:flex-row gap-6 bg-base-200 shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="border border-base-content/10  p-6 flex flex-col md:flex-row gap-6 bg-base-200 shadow-md hover:shadow-lg transition-all duration-300">
       <div className="w-full md:w-1/2">
         <img
           src={images[currentImageIndex]}
@@ -164,9 +164,9 @@ const ProjectCard = ({ project, onDetailsClick }) => {
           )}
           <button
             onClick={() => onDetailsClick(project)}
-            className="btn btn-sm btn-neutral gap-2"
+            className="btn btn-sm btn-outline gap-2 "
           >
-            <FaInfoCircle /> Details
+            <FaInfoCircle /> Details 
           </button>
         </div>
       </div>
@@ -229,85 +229,117 @@ const ProjectSection = () => {
           </div>
         )}
 
-        <dialog id="project_modal" className="modal bg-black/30 backdrop-blur-sm">
-          <div className="modal-box max-w-3xl bg-base-200 text-base-content  shadow-lg text-left">
-            {selectedProject && (
-              <>
-                <div className="border-1 p-6 ">
-                  <img
-                    src={selectedProject.images[modalImageIndex]}
-                    alt={`${selectedProject.title} screenshot ${modalImageIndex + 1}`}
-                    className=" mb-5 object-cover w-full max-h-[300px] shadow-md"
-                  />
-                  <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-                  <p className="text-sm mb-4 text-base-content/80">
-                    {selectedProject.description}
-                  </p>
+        
+        <dialog 
+  id="project_modal" 
+  className="modal backdrop-blur-sm bg-black/30 "
+  aria-labelledby="project-modal-title"
+  aria-modal="true"
+>
+  <div className="modal-box max-w-3xl bg-base-200 text-base-content rounded-none border border-base-content/10 shadow-xl">
+    {selectedProject && (
+      <article>
+        <header className="mb-6">
+          <figure className="relative aspect-video mb-6 overflow-hidden">
+            <img
+              src={selectedProject.images[modalImageIndex]}
+              alt={`Screenshot of ${selectedProject.title} project`}
+              className="w-full h-full object-cover shadow-md"
+              loading="lazy"
+            />
+          </figure>
+          
+          <h2 id="project-modal-title" className="text-2xl font-bold text-primary mb-2">
+            {selectedProject.title}
+          </h2>
+          
+          <p className="text-base-content/80 leading-relaxed">
+            {selectedProject.description}
+          </p>
+        </header>
 
-                  <h4 className="font-semibold mb-1">Key Features:</h4>
-                  <ul className="list-disc list-inside mb-4 text-sm text-base-content/80">
-                    {selectedProject.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
-                    ))}
-                  </ul>
+        <section className="mb-6">
+          <h3 className="font-semibold text-lg mb-3">Key Features</h3>
+          <ul className="space-y-2 text-base-content/80">
+            {selectedProject.features.map((feature, i) => (
+              <li key={i} className="flex items-start">
+                <span className="inline-block mr-2 text-primary">•</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-                  <h4 className="font-semibold mb-2">Tech Stack:</h4>
-                  <div className="flex flex-wrap gap-2 mb-6 justify-start">
-                    {selectedProject.techStack.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="badge badge-outline px-3 py-1 text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+        <section className="mb-8">
+          <h3 className="font-semibold text-lg mb-3">Tech Stack</h3>
+          <div className="flex flex-wrap gap-2">
+            {selectedProject.techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="badge badge-outline px-3 py-1 text-xs hover:bg-base-300 transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
 
-                  <div className="flex flex-wrap gap-3 mb-6 justify-start">
-                    {selectedProject.liveLink && (
-                      <a
-                        href={selectedProject.liveLink}
-                        className="btn btn-sm btn-outline gap-2"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FaGlobe /> Live Site
-                      </a>
-                    )}
-                    {selectedProject.frontendRepo && (
-                      <a
-                        href={selectedProject.frontendRepo}
-                        className="btn btn-sm btn-outline gap-2"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FaCode /> Client Code
-                      </a>
-                    )}
-                    {selectedProject.backendRepo && (
-                      <a
-                        href={selectedProject.backendRepo}
-                        className="btn btn-sm btn-outline gap-2"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FaServer /> Server Code
-                      </a>
-                    )}
-                  </div>
-
-                  <div className="modal-action flex justify-end">
-                    <form method="dialog">
-                      <button className="btn btn-sm btn-error text-white gap-2">
-                        <FaTimes /> Close
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </>
+        <footer className="flex flex-col space-y-4">
+          <div className="flex flex-wrap gap-3">
+            {selectedProject.liveLink && (
+              <a
+                href={selectedProject.liveLink}
+                className="btn btn-outline btn-sm gap-2 hover:bg-base-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit live site"
+              >
+                <FaGlobe aria-hidden="true" /> 
+                Live Site
+              </a>
+            )}
+            {selectedProject.frontendRepo && (
+              <a
+                href={selectedProject.frontendRepo}
+                className="btn btn-outline btn-sm gap-2 hover:bg-base-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View client code repository"
+              >
+                <FaCode aria-hidden="true" /> 
+                Client Code
+              </a>
+            )}
+            {selectedProject.backendRepo && (
+              <a
+                href={selectedProject.backendRepo}
+                className="btn btn-outline btn-sm gap-2 hover:bg-base-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View server code repository"
+              >
+                <FaServer aria-hidden="true" /> 
+                Server Code
+              </a>
             )}
           </div>
-        </dialog>
+
+          <div className="modal-action">
+            <form method="dialog">
+              <button 
+                className="btn btn-error btn-sm text-white gap-2 hover:bg-error/90 transition-colors"
+                aria-label="Close project details"
+              >
+                <FaTimes aria-hidden="true" /> 
+                Close
+              </button>
+            </form>
+          </div>
+        </footer>
+      </article>
+    )}
+  </div>
+</dialog>
       </div>
     </section>
   );
