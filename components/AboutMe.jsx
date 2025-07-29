@@ -75,6 +75,29 @@ const AboutMe = () => {
   </div>
 </div>
 
+
+
+        {/* Services Section */}
+        <div className="mb-12 w-full overflow-hidden px-4 ">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Services</h2>
+          <hr className="border-base-content opacity-30 mb-10" />
+          <div className="mb-12 max-w-3xl mx-auto  grid gap-6 md:grid-cols-3 ">
+            {[
+              ["UI & UX Design", "Creating user-centered interfaces with responsive design."],
+              ["Frontend Development", "Building fast, responsive UIs using React and Tailwind."],
+              ["MERN Stack ", "Full-stack development with MongoDB, Express, React, Node."],
+            ].map(([title, desc], idx) => (
+              <div
+                key={idx}
+                className="border border-base-content/10 bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
+              >
+                <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">{title}</h3>
+                <p className="text-base-content/80">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        
         {/* Skills Section */}
         <div className="mb-12 w-full overflow-hidden px-4">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">Skills</h2>
@@ -109,7 +132,7 @@ const AboutMe = () => {
         <div className="mb-12 w-full overflow-hidden px-4">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">GitHub Activity</h2>
           <hr className="border-base-content opacity-30 mb-10" />
-          <div className="flex justify-center items-center bg-base-200 p-6  shadow-md border border-base-content/10">
+          <div className="flex justify-center items-center bg-base-200 p-6  shadow-md border border-base-content/10 max-w-6xl mx-auto">
             <GitHubCalendar
               username="mehedi-hasan1102"
               colorScheme="light"
@@ -124,26 +147,6 @@ const AboutMe = () => {
 
 
 
-        {/* Services Section */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Services</h2>
-          <hr className="border-base-content opacity-30 mb-10" />
-          <div className="mb-12 max-w-3xl mx-auto grid gap-6 md:grid-cols-3 ">
-            {[
-              ["UI & UX Design", "Creating user-centered interfaces with responsive design."],
-              ["Frontend Development", "Building fast, responsive UIs using React and Tailwind."],
-              ["MERN Stack ", "Full-stack development with MongoDB, Express, React, Node."],
-            ].map(([title, desc], idx) => (
-              <div
-                key={idx}
-                className="border border-base-content/10 bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
-              >
-                <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 mb-3">{title}</h3>
-                <p className="text-base-content/80">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
       
     </section>
