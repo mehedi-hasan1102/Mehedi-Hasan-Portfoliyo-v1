@@ -62,7 +62,7 @@ const HeroSection = () => {
               <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
               <Typewriter />
 
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start ">
                 <a
                   href="https://drive.google.com/uc?export=download&id=1855oZnOicLuZU-ZLXQUxO-hj1hXI9LH8"
                   target="_blank"

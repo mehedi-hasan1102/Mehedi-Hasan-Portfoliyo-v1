@@ -206,7 +206,10 @@ const ProjectSection = () => {
     <section id="projects">
       <div className="md:pl-24 min-h-screen px-6 py-20 bg-base-100 text-base-content text-left">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">My Projects</h2>
-        <hr className="border-base-content opacity-30 mb-10" />
+        {/* <hr className="border-base-content opacity-30 mb-10" /> */}
+         <div className="relative mb-12">
+  <div className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
+</div>
 
         <div className="space-y-10 max-w-6xl mx-auto">
           {visibleProjects.map((project, index) => (
