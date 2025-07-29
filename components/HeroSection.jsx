@@ -68,7 +68,7 @@ const HeroSection = () => {
               <img
                 src="https://i.ibb.co/jZkXcSJJ/6b2a9bc5-6b88-468c-93a6-ff8d4e71cd1c33.png"
                 alt="Mehedi Hasan"
-                className="bg-base-200 text-base-content shadow-lg  p-6 md:p-8 border border-base-content/10"
+                className="bg-base-200 text-base-content  max-h-screen shadow-lg p-6 md:p-8 border border-base-content/10"
               />
             </div>
 
