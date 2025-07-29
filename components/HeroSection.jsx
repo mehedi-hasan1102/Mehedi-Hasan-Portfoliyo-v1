@@ -80,7 +80,7 @@ const HeroSection = () => {
               {/* <p className="text-base sm:text-lg font-light max-w-md">
                 Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p> */}
               <div className="flex gap-4  justify-start">
-                <div className="flex flex-wrap gap-4 justify-start">
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                  
                  
                   {/*  Button */}
