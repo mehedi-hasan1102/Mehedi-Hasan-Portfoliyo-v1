@@ -96,7 +96,7 @@ const AboutMe = () => {
            <div className="relative mb-12">
   <div className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
 </div>
-          <div className="mb-12 max-w-3xl mx-auto  grid gap-6 md:grid-cols-3 ">
+          <div className="mb-12 max-w-6xl mx-auto grid gap-6 md:grid-cols-3 ">
             {[
               ["UI & UX Design", "Creating user-centered interfaces with responsive design."],
               ["Frontend Development", "Building fast, responsive UIs using React and Tailwind."],
