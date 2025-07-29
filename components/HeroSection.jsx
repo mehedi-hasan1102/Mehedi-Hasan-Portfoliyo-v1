@@ -73,14 +73,14 @@ const HeroSection = () => {
             </div>
 
             {/* Text content */}
-            <div className="text-center md:text-left px-6 py-10 flex-1 space-y-8">
+            <div className=" text-left px-6 py-10 flex-1 space-y-8">
               <p className=" text-xl font-light font-serif">Hi, I’m</p>
               <h1 className="text-4xl sm:text-5xl font-bold font-serif">Mehedi Hasan</h1>
               <Typewriter />
-              <p className="text-base sm:text-lg font-light max-w-md">
-                Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p>
-              <div className="flex gap-4 justify-center md:justify-start">
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              {/* <p className="text-base sm:text-lg font-light max-w-md">
+                Passionate Full-Stack Developer based in Bangladesh, specializing in building modern, scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.  </p> */}
+              <div className="flex gap-4  justify-start">
+                <div className="flex flex-wrap gap-4 justify-start">
                  
                  
                   {/*  Button */}
