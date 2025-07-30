@@ -54,7 +54,7 @@ const AboutMe = () => {
 </div>
 
         {/* Bio Section */}
-        <div className="mb-12 max-w-3xl mx-auto">
+        <div className="mb-12 max-w-6xl mx-auto">
           <div className="bg-base-200 text-base-content shadow-lg  p-6 md:p-8 border border-base-content/10">
             <h2 className="text-lg font-semibold  pb-2 mb-3">The Developer Story</h2>
               <div className="relative mb-12">
@@ -69,22 +69,37 @@ const AboutMe = () => {
 <div className="mb-12 w-full overflow-hidden px-4 ">
   <h2 className="text-2xl md:text-3xl font-semibold mb-4">Education</h2>
   {/* <hr className="border-base-content opacity-30 mb-10" /> */}
-   <div className="relative mb-12">
+   <div className="relative mb-12 ">
   <div className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
 </div>
   
-  <div className="max-w-3xl mx-auto grid gap-6 border-base-content/10">
-    <div className="bg-base-200 p-5  shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default border border-base-content/10">
-      <h3 className="text-lg font-semibold  pb-2 mb-2">
-        BSc (Honours) in Physics
-      </h3>
+<div className="mb-12 w-full overflow-hidden px-4">
+  
+  
+
+  <div className="mb-12 max-w-6xl mx-auto grid gap-6 md:grid-cols-2">
+    {[
+      ["BSc (Honours) in Physics", "National University, Bangladesh", "Expected Graduation: 2025"],
+      ["HSC (Science)", "Mymensingh College, Bangladesh", ""],
+    ].map(([degree, institution, extra], idx) => (
+      <div
+        key={idx}
+        className="border border-base-content/10 bg-base-200 p-5 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-default"
+      >
+        <h3 className="text-lg font-semibold pb-2 mb-3">{degree}</h3>
+
         <div className="relative mb-12">
-  <div className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
-</div>
-      <p className="text-base-content/90">National University, Bangladesh</p>
-      <p className="text-sm text-base-content/70 mt-1">Expected Graduation: 2025</p>
-    </div>
+          <div className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
+        </div>
+
+        <p className="text-base-content/80">{institution}</p>
+        {extra && <p className="text-sm text-base-content/60 mt-1">{extra}</p>}
+      </div>
+    ))}
   </div>
+</div>
+
+
 </div>
 
 
